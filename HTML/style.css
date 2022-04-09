@@ -1,3 +1,9 @@
 h1{
   color : rgb(0, 37, 248);
+  text-align: left;
+  /* text-decoration-line: underline;
+  text-decoration-color: rgb(255, 0, 0);
+  text-decoration-style: solid;
+  text-decoration-thickness: 2px; */
+  text-decoration: underline red solid 2px;
 }
