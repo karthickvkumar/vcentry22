@@ -23,8 +23,20 @@ p{
   /* text-shadow : horizontal shadow(number px), vertical shadow(number px), blur effect(number px) shadow color(color code) */
 }
 
-div{
+.absolute{
   height: 200px;
   background-color: blue;
   width: 500px;
+}
+
+.relative{
+  background-color: red;
+  height: 25vh;
+  width: 50vw;
+}
+
+.percentage{
+  background-color: black;
+  height: 50%;
+  width: 50%;
 }
