@@ -14,10 +14,17 @@ p{
   letter-spacing: 5px;
   line-height: 2.5;
   word-spacing: 15px;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 h2{
   color : red;
   text-shadow: 3px 3px 5px gray;
+  /* text-shadow : horizontal shadow(number px), vertical shadow(number px), blur effect(number px) shadow color(color code) */
+}
+
+div{
+  height: 300px;
+  background-color: blue;
+  width: 500px;
 }
