@@ -40,3 +40,11 @@ p{
   height: 50%;
   width: 50%;
 }
+
+.background{
+  background-color: aquamarine;
+  background-image: url("https://cdn.motor1.com/images/mgl/mrz1e/s1/coolest-cars-feature.jpg");
+  background-repeat: no-repeat;
+  background-size: 300px 200px; 
+  /* background-size : width, height */
+}
