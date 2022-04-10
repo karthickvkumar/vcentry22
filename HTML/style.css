@@ -1,4 +1,4 @@
-h1{
+.sample-heading{
   color : rgb(0, 37, 248);
   text-align: left;
   /* text-decoration-line: underline;
@@ -17,14 +17,14 @@ p{
   font-size: 24px;
 }
 
-h2{
+#heading{
   color : red;
   text-shadow: 3px 3px 5px gray;
   /* text-shadow : horizontal shadow(number px), vertical shadow(number px), blur effect(number px) shadow color(color code) */
 }
 
 div{
-  height: 300px;
+  height: 200px;
   background-color: blue;
   width: 500px;
 }
