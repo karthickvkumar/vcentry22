@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Ms Madi', cursive;
+  src: url(MsMadi-Regular.ttf);
+}
+
 .sample-heading{
   color : rgb(0, 37, 248);
   text-align: left;
@@ -9,13 +14,13 @@
   text-transform: capitalize;
 }
 
-p{
+/* p{
   text-indent: 100px;
   letter-spacing: 5px;
   line-height: 2.5;
   word-spacing: 15px;
   font-size: 24px;
-}
+} */
 
 #heading{
   color : red;
@@ -92,4 +97,18 @@ p{
 
 .collapse{
   border-collapse: collapse;
+}
+
+/* 
+display: none;
+display: inline;
+display: block;
+display: inline-block;
+*/
+
+.box{
+  border: 3px solid black;
+  width: 100px;
+  height: 100px;
+  overflow: scroll;
 }
