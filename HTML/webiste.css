@@ -1,0 +1,25 @@
+body{
+  margin: 0px;
+}
+
+.main-container{
+  padding: 13px;
+  height: 95vh;
+}
+
+.column-1{
+  border: 2px solid red;
+  height: 35%;
+}
+
+.column-2{
+  border: 2px solid red;
+  height: 25%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.column-3{
+  border: 2px solid red;
+    height: 35%;
+}

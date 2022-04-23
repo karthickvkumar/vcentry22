@@ -115,11 +115,12 @@ display: inline-block;
 
 .container-1{
   border: 2px solid red;
-  height: 30vh;
+  height: 50vh;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-evenly;
+  align-items: center;
 }
 
 .box-1{
@@ -138,6 +139,7 @@ display: inline-block;
   border: 3px solid rgb(34, 0, 227);
   width: 200px;
   height: 150px;
+  align-self: flex-start;
 }
 
 .box-4{
