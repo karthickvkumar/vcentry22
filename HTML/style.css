@@ -112,3 +112,36 @@ display: inline-block;
   height: 100px;
   overflow: scroll;
 }
+
+.container-1{
+  border: 2px solid red;
+  height: 30vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+
+.box-1{
+  border: 3px solid black;
+  width: 200px;
+  height: 150px;
+}
+
+.box-2{
+  border: 3px solid rgb(255, 0, 212);
+  width: 200px;
+  height: 150px;
+}
+
+.box-3{
+  border: 3px solid rgb(34, 0, 227);
+  width: 200px;
+  height: 150px;
+}
+
+.box-4{
+  border: 3px solid rgb(253, 46, 0);
+  width: 200px;
+  height: 150px;
+}
