@@ -1,6 +1,13 @@
 @font-face {
-  font-family: 'Ms Madi', cursive;
-  src: url(MsMadi-Regular.ttf);
+  font-family: 'water_brushregular';
+  src: url('waterbrush-regular-webfont.woff2') format('woff2'),
+       url('waterbrush-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1{
+  font-family: 'water_brushregular';
 }
 
 .sample-heading{
