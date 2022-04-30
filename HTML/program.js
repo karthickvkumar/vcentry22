@@ -65,3 +65,23 @@ studentInfo.roll_no = "7WRSD544555";
 // To delete a existing Record -> delete object_variable_name.key
 delete studentInfo.first_name;
 console.log(studentInfo)
+
+//Array -> It is a collection of List data
+
+// Syntax of creating an Array
+
+// var variable_name = [ value_1, value_2, ... , Value_n ];
+
+// value -> Number, String, Boolean, Object, Array, Function
+
+var listOfMark = [70, 89, 45, 78, 54];
+
+var nameList = ["karthick","karthick", "karthick","karthick", "karthick"];
+
+var studentList = [
+  { name : "Karthick", age : 24},
+  {name : "Ak", age : 20},
+  { name : "Yuvi", age : 25}
+];
+
+console.log(studentList);
