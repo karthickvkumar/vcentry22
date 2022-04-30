@@ -43,7 +43,25 @@ var studentInfo = {
   first_name : "Karthick",
   last_name : "kumar",
   age : 28,
-  roll_no : 487655566
+  roll_no : 487655566,
+  future_value : undefined
 };
 
+
+// Object -> 4 operation = read value, insert new value, edit exisiting value, delete existing value
+
+// To Read a Value -> object_variable_name.key;
+console.log(studentInfo.first_name);
+console.log(studentInfo.age);
+
+// To Insert a new Value -> object_variable_name.newKey = value;
+
+studentInfo.blood_group = "A +ve";
+
+// To Edit/Updated an exisiting value -> object_variable_name.existing_key = new_value;
+
+studentInfo.roll_no = "7WRSD544555";
+
+// To delete a existing Record -> delete object_variable_name.key
+delete studentInfo.first_name;
 console.log(studentInfo)
