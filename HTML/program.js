@@ -85,3 +85,48 @@ var studentList = [
 ];
 
 console.log(studentList);
+
+// Operation in Array -> 4 Operation = Insert a new value, Read the Value, Edit the exiting value, Delete the value
+
+// Insert a new value into Array
+
+// push() - Insert a new value at the end of array record
+// array_variable_name.push(value_1, value_2, ... , value_n);
+
+studentList.push({name: "Kumar", age: 28}, {name: "YK", age: 27});
+
+// unshift() -> Insert a new value at the start of array record
+// array_variable_name.unshift(value_1, value_2, ... , value_n);
+
+studentList.unshift({name : "Zyan", age : 29});
+console.log(studentList);
+
+// To Read value from Array
+// array_variable_name[index]
+
+console.log(studentList[1].name)
+
+// To edit a existing value from Array
+// array_variable_name[index] = value;
+studentList[2] = {name: "XYZ", age : 100};
+console.log(studentList);
+
+// To delete an value 
+
+// pop() -> Remove a value from last of the Array
+// array_variable_name.pop();
+studentList.pop();
+
+// shift() -> Remove a value from the Start of the Array
+// array_variable_name.shift();
+
+studentList.shift();
+
+// splice() -> Remove a value from specific index of the Array
+// array_variable_name.splice(index, deleteCount);
+
+studentList.splice(2, 1);
+
+console.log(studentList);
+
+console.log(studentList.length);
