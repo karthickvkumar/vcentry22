@@ -214,3 +214,36 @@ function check_voting_status(){
     console.log("The user is not eligible for vote");
   }
 }
+
+//Syntax - Multipe if else conditon
+/*
+  if(conditon) {
+    // code block will execute if the condition is Truthy.
+  }
+  else if(condition){
+   // code block will execute if the condition is Truthy
+  }
+  else{
+    // code block will execute if the condition is Falsy.
+  }
+*/
+
+/*
+1. To give person age as input -> Number
+2. idenfity -> less then 18 -> The person is Minor
+2. idenfity -> greater then or equal to 18 and less than 60 -> The person is Major
+3. idenfity -> greater then or equal to 60 -> The person is Super Citizen
+*/
+
+function check_person_category(){
+  var age = prompt("Enter person age");
+  if(age < 18){
+    console.log("The person is Minor");
+  }
+  else if(age >= 18 && age < 60){
+    console.log("The person is Major");
+  }
+  else{
+    console.log("The person is Super Citizen");
+  }
+}
