@@ -109,6 +109,8 @@ console.log(studentList[1].name)
 // To edit a existing value from Array
 // array_variable_name[index] = value;
 studentList[2] = {name: "XYZ", age : 100};
+studentList[2].age = 50;
+
 console.log(studentList);
 
 // To delete an value 
@@ -130,3 +132,27 @@ studentList.splice(2, 1);
 console.log(studentList);
 
 console.log(studentList.length);
+
+// Function -> Block of Code 
+
+// Syntax for Creating a Function (Function Definition)
+
+// function function_name(){
+//   // coding
+// } 
+
+// function_name -> It should be a Proper text value -> a-z, A-Z, 0-9, $, _
+
+// Syntax for Executing/Running the Function (Function Invocation)
+
+// function_name();
+
+function onSubmitForm(){
+  var output = "The form has been submitted successfully";
+  console.log(output);
+};
+
+function onLogin(){
+  var result = "You have loggin to the application";
+  console.log(result);
+}
