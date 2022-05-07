@@ -269,8 +269,28 @@ Find even number for given N number of limit.
 function check_even_numbers(){
   var Nth_number = prompt("Enter the last number");
   for(var count = 1; count <= Nth_number; count++){
-    if(count % 2 === 0 ){
+    if(count % 2 === 0){
       console.log(count, "is a Even Number");
     }
+  }
+}
+
+/*Syntax - for in (loop) - Used to iterate Object properties
+for(var key in object_variable_name){
+ // coding
+}
+*/
+
+function iterateForInLoop(){
+  var employee = {
+    first_name : "Karthick",
+    last_name : "kumar",
+    father_name : "Xyz",
+    age : 27,
+    status : true
+  }
+
+  for(var key in employee){
+    console.log(key, employee[key]);
   }
 }
