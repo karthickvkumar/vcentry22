@@ -428,5 +428,23 @@ function calculate(){
     console.log(error);
     alert("Something went wrong pls contact admin");
    }
-    
 }
+
+// Local Storage -> Set a new value, Read a value, edit value, Delete particular value
+// max size - 13 mb
+
+// syntax -> Set a new value
+// localStorage.setItem("key", "value")
+
+localStorage.setItem("username", "Karthick@gmail.com");
+
+// syntax -> Read a value
+// localStorage.getItem("key");
+localStorage.getItem("username")
+
+//syntax - Remove a particular value
+//localStorage.removeItem(key);
+localStorage.removeItem("username");
+
+//syntax - To clear all values
+localStorage.clear();
