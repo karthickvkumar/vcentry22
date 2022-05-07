@@ -357,18 +357,76 @@ switch(expression){
 */
 
 function findWeekDay(){
-  var day = prompt("Enter a number from 0 to 6");
+  var value = prompt("Enter a number from 0 to 6");
+  var day = parseInt(value);
   switch(day){
-    case "0":
+    case 0:
       console.log("Sunday");
       break;
-    case "1":
+    case 1:
       console.log("Monday");
       break;
-    case "2":
+    case 2:
       console.log("Tuesday");
       break;
     default:
       console.log("Out of Range");
   }
+}
+
+function display(){
+  // Local Scope - Defining a Variable inside a Function 
+  // Accessibilty - It can be used  With in the Function
+  var studentName = "Karthick";
+  console.log(studentName);
+
+  // Global Scope - Defining a variable Outside a Function 
+  // Accessibility - It can be used Inside any Funtion
+  console.log(user_email);
+
+  // Automatic Global Scope - Defining a variable declaration outside a funciton, but assgning value inside a function
+  // Accessibility - It can be used Inside any Funtion
+  future_value = "Generated result";
+  console.log(future_value)
+}
+
+function printMessage(){
+  // console.log(studentName);
+  console.log(user_email);
+  future_value = 1545;
+  console.log(future_value)
+}
+
+function calculate(){
+   try{
+    var value_1 = prompt("Enter number value 1");
+    var number_1 = parseInt(value_1);
+
+    var value_2 = prompt("Enter number value 2");
+    var number_2 = parseInt(value_2);
+    
+    var symbol = prompt("Enter any math operator");
+
+    switch(symbol){
+      case "+":
+        console.log(number_1 + number_3);
+        break;
+      case "-":
+        console.log(number_1 - number_2);
+        break;
+      case "*":
+        console.log(number_1 * number_2);
+        break;
+      case "/":
+        console.log(number_1 / number_2);
+        break;
+      default: 
+        console.log("You have entered an wrong math operator");
+    }
+   }
+   catch(error){
+    console.log(error);
+    alert("Something went wrong pls contact admin");
+   }
+    
 }
