@@ -294,3 +294,81 @@ function iterateForInLoop(){
     console.log(key, employee[key]);
   }
 }
+
+/*
+Syntax - for of (loop) - Used to iterate list of Array
+for(var value of array_variable_name){
+ // coding
+}
+*/
+
+function iterateForOfLoop(){
+  var studentList = [
+    { name : "Karthick", age : 24},
+    {name : "Ak", age : 20},
+    { name : "Yuvi", age : 25}
+  ];
+
+  for(var value of studentList){
+    console.log(value.name, value.age);
+  }
+}
+
+/*Syntax - While (loop) - Entry level check
+while(condition){
+ // loop code block
+}
+*/
+
+function whileLoop(){
+  var count = 1;
+  while(count <= 5){
+    console.log("The count is", count);
+    count++;
+  }
+}
+
+/*
+Syntax - do While (loop) - Exit Level Check
+do{
+ // code block      
+}while(condition)
+*/
+
+function doWhileLoop(){
+  var count = 6;
+  do{
+    console.log("The count is", count);
+    count++;
+  }while(count <= 5);
+}
+
+/*Syntax - Switch Case
+switch(expression){
+  case value :
+    // code block
+    break;
+  case value :
+    // code block
+    break;
+  default:
+    //code block
+}
+*/
+
+function findWeekDay(){
+  var day = prompt("Enter a number from 0 to 6");
+  switch(day){
+    case "0":
+      console.log("Sunday");
+      break;
+    case "1":
+      console.log("Monday");
+      break;
+    case "2":
+      console.log("Tuesday");
+      break;
+    default:
+      console.log("Out of Range");
+  }
+}
