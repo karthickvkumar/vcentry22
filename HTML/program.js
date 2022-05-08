@@ -147,6 +147,26 @@ console.log(studentList.length);
 
 // function_name();
 
+/*
+
+Type - 1
+function function_name(){
+
+}
+
+Type -2 
+var function_name = function(){
+
+}
+
+Annonymous Function (Callback function)
+
+function(){
+ 
+}
+
+*/
+
 function onSubmitForm(){
   var output = "The form has been submitted successfully";
   console.log(output);
@@ -430,7 +450,7 @@ function calculate(){
    }
 }
 
-// Local Storage -> Set a new value, Read a value, edit value, Delete particular value
+// Local Storage (permanent) -> Set a new value, Read a value, edit value, Delete particular value
 // max size - 13 mb
 
 // syntax -> Set a new value
@@ -447,4 +467,73 @@ localStorage.getItem("username")
 localStorage.removeItem("username");
 
 //syntax - To clear all values
-localStorage.clear();
+// localStorage.clear();
+
+
+// Session Storage (Temporary) -> Set a new value, Read a value, Delete particular value
+
+// max size - 13 mb
+
+// syntax -> Set a new value
+// sessionStorage.setItem("key", "value")
+
+sessionStorage.setItem("username", "Karthick@gmail.com");
+
+// syntax -> Read a value
+// sessionStorage.getItem("key");
+sessionStorage.getItem("username")
+
+//syntax - Remove a particular value
+//sessionStorage.removeItem(key);
+sessionStorage.removeItem("username");
+
+//syntax - To clear all values
+// sessionStorage.clear();
+
+// Timers
+/*
+setTimeout - Its used to delay the code excution
+syntax:
+setTimeout(function(){ 
+ code block
+}, time_millisecond );
+
+1000 ms -> 1 second
+*/
+
+// clearTimeout -> It will stop the setTimeout
+// clearTimeout(setTimeoutID);
+
+/*
+setInterval -> It is used to run a code on the given time interval
+syntax:
+setInterval(function(){ 
+
+}, time_millisecond);
+*/
+
+// clearInterval -> It will stop the time interval
+// clearInterval(setIntervalID);
+
+// Function - block of code (directly written in JS file)
+// Method - Same like function (defined insisde a Class)
+
+class Authenticate{
+  login(){
+    console.log("This is login code")
+  }
+
+  register(){
+    console.log("This is a Register code")
+  }
+}
+
+var auth = new Authenticate();
+console.log(auth.login());
+
+class HomePage extends Authenticate{
+
+}
+
+var home = new HomePage();
+console.log(home.register())
