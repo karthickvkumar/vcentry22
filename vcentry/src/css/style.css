@@ -1,0 +1,20 @@
+.lable{
+  display: inline-block;
+  width: 200px;
+}
+
+.inputbox{
+  font-size: 18px;
+  width: 250px;
+}
+
+.space{
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.button{
+  width: 100px;
+  height: 35px;
+  font-size: 16px;
+}
