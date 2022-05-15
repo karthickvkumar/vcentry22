@@ -5,7 +5,9 @@ class LoginAction extends Component {
   constructor(props){
     super(props);
     this.state = {
-      message : "This is a state message"
+      message : "This is a state message",
+      username : '',
+      password : ''
     }
   }
 
@@ -15,8 +17,29 @@ class LoginAction extends Component {
     })
   }
 
-  render(){
+  onHandleInput = (event) => {
+    // console.log(event.target.value, event.target.name);
+    /*if(event.target.name == "username"){
+      this.setState({
+        username : event.target.value
+      })
+    }
+    else{
+      this.setState({
+        password : event.target.value
+      })
+    }*/
 
+    this.setState({
+      [event.target.name] : event.target.value
+    })
+  }
+
+  onLogin(){
+    console.log(this.state)
+  }
+
+  render(){
     var name = "Karthick Kumar";
 
     return (
@@ -25,13 +48,14 @@ class LoginAction extends Component {
         <h2>{this.state.message}</h2>
         <div className="space">
           <label className="lable">Enter your Username</label>
-          <input className="inputbox" type="text" placeholder="Pls enter username" />
+          <input className="inputbox" type="text" placeholder="Pls enter username"  onChange={ this.onHandleInput } name="username"/>
         </div>
         <div className="space">
           <label className="lable">Enter your Password</label>
-          <input className="inputbox" type="password" placeholder="Pls enter password" />
+          <input className="inputbox" type="password" placeholder="Pls enter password" onChange={ this.onHandleInput } name="password"/>
         </div>
-        <button onClick={() => this.dispalyMessage() } className="button">Login</button>
+        {/* <button onClick={() => this.dispalyMessage() } className="button">Login</button> */}
+        <button onClick={() => this.onLogin() } className="button">Login</button>
       </div>
     )
   }
