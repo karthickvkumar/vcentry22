@@ -2,14 +2,25 @@ import React, { Component } from "react";
 
 class LoginAction extends Component {
 
+  constructor(props){
+    super(props);
+    this.state = {
+      message : "This is a state message"
+    }
+  }
+
   dispalyMessage(){
     alert("Hi this is the message..")
   }
 
   render(){
+
+    var name = "Karthick Kumar";
+
     return (
       <div>
-        <h1>Login Page Action</h1>
+        <h1>Login Page Action, {name}</h1>
+        <h2>{this.state.message}</h2>
         <div className="space">
           <label className="lable">Enter your Username</label>
           <input className="inputbox" type="text" placeholder="Pls enter username" />
