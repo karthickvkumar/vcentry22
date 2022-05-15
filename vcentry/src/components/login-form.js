@@ -10,7 +10,9 @@ class LoginAction extends Component {
   }
 
   dispalyMessage(){
-    alert("Hi this is the message..")
+    this.setState({
+      message : "Its updated to new state message value"
+    })
   }
 
   render(){
