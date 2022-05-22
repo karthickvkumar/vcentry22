@@ -11,6 +11,8 @@ const ResetAccount = () => {
     password : ""
   });
 
+  const [passwordVisiblity, setPassowrdVisibility] = useState(true);
+
   const updateStudentName = () => {
     const value = prompt("Enter the student name");
 
@@ -27,6 +29,10 @@ const ResetAccount = () => {
     console.log(formData);
   }
 
+  const controlPasswordVisibily = (status) => {
+    setPassowrdVisibility(status);
+  }
+
   return(
     <div>
       <h1>This is Reset Account {username}</h1>
@@ -37,7 +43,13 @@ const ResetAccount = () => {
         </div>
         <div className="space">
           <label className="lable">Enter your Password</label>
-          <input className="inputbox" type="password" placeholder="Pls enter password" onChange={ onHandleInput } name="password"/>
+          <input className="inputbox" type={passwordVisiblity ? "password" : "text"} placeholder="Pls enter password" onChange={ onHandleInput } name="password"/>
+
+          {
+            passwordVisiblity ? <img src={require("../images/close-eye.png")} className="eye-icon" onClick={() => controlPasswordVisibily(false)}/>
+                : <img src={require("../images/open-eye.jpg")} className="eye-icon" onClick={() => controlPasswordVisibily(true)}/>
+          }
+
         </div>
         <button className="button" onClick={() => onReset()}>Reset</button>
         <br></br>

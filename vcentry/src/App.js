@@ -1,6 +1,7 @@
-import LoginAction from "./components/login-form";
+// import LoginAction from "./components/login-form";
 import ResetAccount from "./components/reset-account";
-import RegisterForm from "./components/register-form";
+// import RegisterForm from "./components/register-form";
+import ImageContent from "./components/image-content";
 import "./css/style.css";
 
 function App() {
@@ -8,8 +9,9 @@ function App() {
     <div>
       <h1>Welcome to React JS Application</h1>
       {/* <LoginAction></LoginAction> */}
-      {/* <ResetAccount></ResetAccount> */}
-      <RegisterForm></RegisterForm>
+      <ResetAccount></ResetAccount>
+      {/* <RegisterForm></RegisterForm> */}
+      {/* <ImageContent></ImageContent> */}
     </div>
   );
 }
