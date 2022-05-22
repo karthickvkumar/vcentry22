@@ -27,3 +27,29 @@
   width: 30px;
   cursor: pointer;
 }
+
+.wrapper{
+  height: 98vh;
+}
+
+.header{
+  height: 10%;
+  border: 3px solid red;
+}
+
+.container{
+  height: 90%;
+    border: 3px solid red;
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar{
+  width: 20%;
+  border: 3px solid red;
+}
+
+.content{
+  width: 80%;
+    border: 3px solid red;
+}

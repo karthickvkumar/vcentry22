@@ -6,6 +6,13 @@ import ResetAccount from "./components/reset-account";
 import RegisterForm from "./components/register-form";
 import ImageContent from "./components/image-content";
 import LandingContent from "./components/landing-content";
+import MailPage from "./components/mail";
+
+import InboxPage from "./pages/inbox";
+import SentPage from "./pages/sent";
+import TrashPage from "./pages/trash";
+import StaredPage from "./pages/stared";
+import PageNotFound from "./pages/page-not-found";
 import "./css/style.css";
 
 function App() {
@@ -17,6 +24,14 @@ function App() {
         <Route path="reset" element={<ResetAccount></ResetAccount>}></Route>
         <Route path="register" element={<RegisterForm></RegisterForm>}></Route>
         <Route path="image" element={<ImageContent></ImageContent>}></Route>
+        <Route path="mail" element={<MailPage></MailPage>}>
+          <Route path="inbox" element={<InboxPage></InboxPage>}></Route>
+          <Route path="sent" element={<SentPage></SentPage>}></Route>
+          <Route path="trash" element={<TrashPage></TrashPage>}></Route>
+          <Route path="started" element={<StaredPage></StaredPage>}></Route>
+        </Route>
+
+        <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
       </Routes>
     </BrowserRouter>
   );
