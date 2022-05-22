@@ -5,7 +5,10 @@ const ImageContent = () => {
   return (
     <div>
       <h1>Image Content</h1>
+      {/* Loading Image from File System (Local) */}
       <img src={require("../images/shinchu.jpg")} alt="" className="img"/>
+
+      {/* Loading Image from Online (Live) */}
       <img src="https://www.focus2move.com/wp-content/uploads/2021/02/Bugatti-Divo_Lady_Bug-2020-1024-0b.jpg" alt="" className="img" />
       {/* <FontAwesomeIcon icon="fa-solid fa-user-alien" /> */}
       <h2>If Condition (Inline - If)</h2>
