@@ -29,6 +29,18 @@ const InboxPage = () => {
           })
   }
 
+  const onRemoveUser = (userId) => {
+    const url = "https://reqres.in/api/users/"+userId;
+
+    axios.delete(url)
+        .then((success) => {
+          console.log(success)
+        })
+        .catch((error) => {
+          console.log(error)
+        })
+  }
+
   const profiles = userList.map((value, index) => {
     return (
       <tr key={index}>
@@ -38,6 +50,9 @@ const InboxPage = () => {
         <td>{value.email}</td>
         <td>
           <img src={value.avatar} alt="" width="50" />
+        </td>
+        <td>
+          <button onClick={() => onRemoveUser(value.id)}>Remove</button>
         </td>
       </tr>
     )
@@ -58,6 +73,7 @@ const InboxPage = () => {
             <th>Last Name</th>
             <th>Email Id</th>
             <th>Profile Picture</th>
+            <th>Delete</th>
           </tr>
         </thead>
         <tbody>
