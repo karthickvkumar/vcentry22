@@ -1,12 +1,18 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 
 const InboxPage = () => {
 
   const [userList, setUserList] = useState([]);
+  const [loader, setLoader] = useState(true);
 
-  const loadUserProfile = () => {
-    const url = "https://reqres.in/api/users?page=2";
+  useEffect(() => {
+    loadUserProfile(1);
+  }, []);
+
+  const loadUserProfile = (pageNo) => {
+    setLoader(true);
+    const url = "https://reqres.in/api/users?page=" + pageNo;
     //method chaining
     axios.get(url)
           .then((success) => {
@@ -14,10 +20,12 @@ const InboxPage = () => {
             let response = success.data;
             // console.log(response.data);
             setUserList(response.data);
+            setLoader(false);
           })
           .catch((error) => {
             //failure code
             console.log(error);
+            setLoader(false);
           })
   }
 
@@ -36,7 +44,10 @@ const InboxPage = () => {
   })
 
   return (
-    <div>
+    <div className='inbox-content'>
+      {loader &&  <div className='overlay'>
+        <img src={require("../images/spinner.gif")} className="loader"/>
+      </div>}
       <h1>This is a Inbox Page</h1>
       <button onClick={() => loadUserProfile()}>Load User Profile</button>
       <table id="customers">
@@ -50,9 +61,23 @@ const InboxPage = () => {
           </tr>
         </thead>
         <tbody>
-          {profiles}
+          {
+            profiles.length == 0 ?
+              <tr>
+                <td colSpan={5}>
+                  No Record Found
+                </td>
+              </tr>
+              :
+              profiles
+          }
         </tbody>
       </table>
+      <div>
+        <button onClick={() => loadUserProfile(1)}>1</button>
+        <button onClick={() => loadUserProfile(2)}>2</button>
+        <button onClick={() => loadUserProfile(3)}>3</button>
+      </div>
     </div>
   );
 };
