@@ -13,6 +13,7 @@ import SentPage from "./pages/sent";
 import TrashPage from "./pages/trash";
 import StaredPage from "./pages/stared";
 import PageNotFound from "./pages/page-not-found";
+import ParentComponent from "./pages/parent";
 import "./css/style.css";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route path="sent" element={<SentPage></SentPage>}></Route>
           <Route path="trash" element={<TrashPage></TrashPage>}></Route>
           <Route path="started" element={<StaredPage></StaredPage>}></Route>
+          <Route path="parent" element={<ParentComponent></ParentComponent>}></Route>
         </Route>
 
         <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
