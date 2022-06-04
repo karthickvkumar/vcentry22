@@ -1,7 +1,10 @@
 import React, {useState} from "react";
+import {useNavigate} from "react-router-dom";
 
 const ResetAccount = () => {
   const username = "karthick kumar";
+
+  const navigate = useNavigate();
 
   // const [variableName, methodName] = useState(intialValue);
   const [studentName, setStudentName] = useState("Mr.William");
@@ -27,6 +30,8 @@ const ResetAccount = () => {
 
   const onReset = () => {
     console.log(formData);
+
+    navigate("/mail", {state: formData});
   }
 
   const controlPasswordVisibily = (status) => {

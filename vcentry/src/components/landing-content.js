@@ -17,6 +17,8 @@ const LandingContent = () => {
       <NavLink to="/mail">Click to go Mail Page</NavLink>
       <br></br>
       <NavLink to="/register">Click to go Register Page</NavLink>
+      <br></br>
+      <NavLink to="/reset">Click to go Reset Page</NavLink>
     </div>
   );
 };

@@ -1,10 +1,16 @@
 import React from 'react';
-import {Outlet, NavLink} from "react-router-dom";
+import {Outlet, NavLink, useLocation} from "react-router-dom";
 
 const MailPage = () => {
+
+  const location = useLocation();
+  console.log(location.state);
+
   return (
     <div className="wrapper">
-      <div className="header"></div>
+      <div className="header">
+        <h2>Welcome {location?.state?.username}</h2>
+      </div>
       <div className="container">
         <div className="sidebar">
           <NavLink to="/mail/inbox">Go to Inbox</NavLink>
