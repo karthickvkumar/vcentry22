@@ -1,5 +1,6 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import axios from 'axios';
+import { AppContext } from '../context/app-context';
 
 const StaredPage = () => {
 
@@ -7,6 +8,8 @@ const StaredPage = () => {
     name : "",
     job : ""
   });
+
+  const {useremail} = useContext(AppContext);
 
   const onHandleInput = (event) => {
     setUser({...user, [event.target.name] : event.target.value});
@@ -29,7 +32,7 @@ const StaredPage = () => {
 
   return (
     <div>
-      <h1>This is a Started Page</h1>
+      <h1>This is a Started Page {useremail}</h1>
       <div className="space">
           <label className="lable">Enter your Name</label>
           <input className="inputbox" type="text" placeholder="Pls enter name"  onChange={ onHandleInput } name="name"/>

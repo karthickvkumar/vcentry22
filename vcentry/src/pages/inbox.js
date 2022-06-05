@@ -1,10 +1,14 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import axios from 'axios';
+
+import { AppContext } from '../context/app-context';
 
 const InboxPage = () => {
 
   const [userList, setUserList] = useState([]);
   const [loader, setLoader] = useState(true);
+
+  const {useremail} = useContext(AppContext);
 
   useEffect(() => {
     loadUserProfile(1);
@@ -63,7 +67,7 @@ const InboxPage = () => {
       {loader &&  <div className='overlay'>
         <img src={require("../images/spinner.gif")} className="loader"/>
       </div>}
-      <h1>This is a Inbox Page</h1>
+      <h1>This is a Inbox Page {useremail}</h1>
       <button onClick={() => loadUserProfile()}>Load User Profile</button>
       <table id="customers">
         <thead>
