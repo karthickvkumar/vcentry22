@@ -1,8 +1,12 @@
 import React, {useState, useContext} from 'react';
 import axios from 'axios';
 import { AppContext } from '../context/app-context';
+import { useDispatch } from 'react-redux';
+import { sendUserResult } from '../redux/action/app-action';
 
 const StaredPage = () => {
+
+  const dispatch = useDispatch();
 
   const [user, setUser] = useState({
     name : "",
@@ -21,7 +25,8 @@ const StaredPage = () => {
     axios.put(url, user)
         .then((success) => {
           const response = success.data;
-          console.log(response);
+          dispatch(sendUserResult(response));
+          alert("Profile Added")
         })
         .catch((error) => {
           console.log(error);

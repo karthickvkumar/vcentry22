@@ -19,6 +19,7 @@ const MailPage = () => {
       <div className="wrapper">
         <div className="header">
           <h2>Welcome {location?.state?.username}</h2>
+          <NavLink to="/">Back</NavLink>
         </div>
         <div className="container">
           <div className="sidebar">

@@ -16,26 +16,32 @@ import PageNotFound from "./pages/page-not-found";
 import ParentComponent from "./pages/parent";
 import "./css/style.css";
 
+import { Provider } from "react-redux";
+import configureStore from "./redux/store/redux-store";
+const reduxStore = configureStore();
+
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<LandingContent></LandingContent>}></Route>
-        <Route path="login" element={<LoginAction></LoginAction>}></Route>
-        <Route path="reset" element={<ResetAccount></ResetAccount>}></Route>
-        <Route path="register" element={<RegisterForm></RegisterForm>}></Route>
-        <Route path="image" element={<ImageContent></ImageContent>}></Route>
-        <Route path="mail" element={<MailPage></MailPage>}>
-          <Route path="inbox" element={<InboxPage></InboxPage>}></Route>
-          <Route path="sent" element={<SentPage></SentPage>}></Route>
-          <Route path="trash" element={<TrashPage></TrashPage>}></Route>
-          <Route path="started" element={<StaredPage></StaredPage>}></Route>
-          <Route path="parent" element={<ParentComponent></ParentComponent>}></Route>
-        </Route>
+    <Provider store={reduxStore}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingContent></LandingContent>}></Route>
+          <Route path="login" element={<LoginAction></LoginAction>}></Route>
+          <Route path="reset" element={<ResetAccount></ResetAccount>}></Route>
+          <Route path="register" element={<RegisterForm></RegisterForm>}></Route>
+          <Route path="image" element={<ImageContent></ImageContent>}></Route>
+          <Route path="mail" element={<MailPage></MailPage>}>
+            <Route path="inbox" element={<InboxPage></InboxPage>}></Route>
+            <Route path="sent" element={<SentPage></SentPage>}></Route>
+            <Route path="trash" element={<TrashPage></TrashPage>}></Route>
+            <Route path="started" element={<StaredPage></StaredPage>}></Route>
+            <Route path="parent" element={<ParentComponent></ParentComponent>}></Route>
+          </Route>
 
-        <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
-      </Routes>
-    </BrowserRouter>
+          <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   );
 }
 
