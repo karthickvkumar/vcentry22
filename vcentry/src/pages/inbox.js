@@ -8,7 +8,7 @@ const InboxPage = () => {
   const [userList, setUserList] = useState([]);
   const [loader, setLoader] = useState(true);
 
-  const {useremail} = useContext(AppContext);
+  const {useremail, onRecivedUser} = useContext(AppContext);
 
   useEffect(() => {
     loadUserProfile(1);
@@ -45,6 +45,11 @@ const InboxPage = () => {
         })
   }
 
+  const onShare = (user) => {
+    onRecivedUser(user);
+    alert("User Profile has been shared");
+  }
+
   const profiles = userList.map((value, index) => {
     return (
       <tr key={index}>
@@ -54,6 +59,9 @@ const InboxPage = () => {
         <td>{value.email}</td>
         <td>
           <img src={value.avatar} alt="" width="50" />
+        </td>
+        <td>
+          <button onClick={() => onShare(value)}>Share</button>
         </td>
         <td>
           <button onClick={() => onRemoveUser(value.id)}>Remove</button>
@@ -77,6 +85,7 @@ const InboxPage = () => {
             <th>Last Name</th>
             <th>Email Id</th>
             <th>Profile Picture</th>
+            <th>Share</th>
             <th>Delete</th>
           </tr>
         </thead>

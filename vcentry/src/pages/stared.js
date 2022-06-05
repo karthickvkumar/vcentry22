@@ -9,7 +9,7 @@ const StaredPage = () => {
     job : ""
   });
 
-  const {useremail} = useContext(AppContext);
+  const {useremail, profile} = useContext(AppContext);
 
   const onHandleInput = (event) => {
     setUser({...user, [event.target.name] : event.target.value});
@@ -42,6 +42,10 @@ const StaredPage = () => {
           <input className="inputbox" type="text" placeholder="Pls enter job" onChange={ onHandleInput } name="job"/>
         </div>
         <button onClick={() => submitUser()}>Submit User</button>
+        <div>
+          <h1>{profile.first_name} {profile.last_name}</h1>
+          <img src={profile.avatar} />
+        </div>
     </div>
   );
 };
