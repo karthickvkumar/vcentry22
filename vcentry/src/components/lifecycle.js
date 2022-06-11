@@ -1,55 +1,54 @@
-import React, { Component } from 'react';
-import {NavLink} from "react-router-dom";
+import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 
 class LifeCycleComponent extends Component {
-
-  constructor(){
+  constructor() {
     super();
     this.state = {
-      message : "Hello Everyone.."
-    }
-    console.log("constructor - Initialization method")
+      message: "Hello Everyone..",
+    };
+    console.log("constructor - Initialization method");
   }
-  
-  UNSAFE_componentWillMount(){
-    console.log("componentWillMount - Mounting method")
+
+  UNSAFE_componentWillMount() {
+    console.log("componentWillMount - Mounting method");
   }
-  
-  componentDidMount(){
-    console.log("componentDidMount - Mounting method")
+
+  componentDidMount() {
+    console.log("componentDidMount - Mounting method"); //Alt key + Down Arr
+    //duplicate - Shift key + Alt Key + Down Arror
   }
-  
-  updateMessage(){
+
+  updateMessage() {
     this.setState({
-      message : "Hello Everyone"
-    })
+      message: "Hello Everyone",
+    });
   }
-  
-  shouldComponentUpdate(nextProps,nextState){
+
+  shouldComponentUpdate(nextProps, nextState) {
     console.log(nextState, this.state);
-    console.log("shouldComponentUpdate - Updating method")
-    if(nextState.message == this.state.message){
+    console.log("shouldComponentUpdate - Updating method");
+    if (nextState.message == this.state.message) {
       return false;
-    }
-    else{
+    } else {
       return true;
     }
   }
-  
-  UNSAFE_componentWillUpdate(){
-    console.log("componentWillUpdate - Updating method")    
+
+  UNSAFE_componentWillUpdate() {
+    console.log("componentWillUpdate - Updating method");
   }
-  
-  componentDidUpdate(){
-    console.log("componentDidUpdate - Updating method")
+
+  componentDidUpdate() {
+    console.log("componentDidUpdate - Updating method");
   }
-  
-  componentWillUnmount(){
-    console.log("componentWillUnmount - UnMounting method")
+
+  componentWillUnmount() {
+    console.log("componentWillUnmount - UnMounting method");
   }
 
   render() {
-    console.log("render - Mounting method")
+    console.log("render - Mounting method");
     return (
       <div>
         <h1>Life Cycle Component {this.state.message}</h1>

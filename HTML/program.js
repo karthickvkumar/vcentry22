@@ -537,3 +537,30 @@ class HomePage extends Authenticate{
 
 var home = new HomePage();
 console.log(home.register())
+
+// ES5
+var variableName = value;
+
+function functionName(){
+
+}
+
+//ES 6
+let variableName = value; // block scope
+const variableName = value; // constant variable
+
+const functionName = () => {
+
+}
+
+// Difference between var and let
+function dispay(){
+  if(true){
+    var username = "abc";
+    let USERNAME = "ABC"; 
+  }
+
+  console.log(username);
+  console.log(USERNAME);
+}
+
