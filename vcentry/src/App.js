@@ -14,6 +14,7 @@ import TrashPage from "./pages/trash";
 import StaredPage from "./pages/stared";
 import PageNotFound from "./pages/page-not-found";
 import ParentComponent from "./pages/parent";
+import LifeCycleComponent from "./components/lifecycle";
 import "./css/style.css";
 
 import { Provider } from "react-redux";
@@ -37,6 +38,7 @@ function App() {
             <Route path="started" element={<StaredPage></StaredPage>}></Route>
             <Route path="parent" element={<ParentComponent></ParentComponent>}></Route>
           </Route>
+          <Route path="lifecycle" element={<LifeCycleComponent></LifeCycleComponent>}></Route>
 
           <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
         </Routes>
