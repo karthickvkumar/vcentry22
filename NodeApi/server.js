@@ -74,6 +74,56 @@ app.post("/api/user/create", (request, response) => {
 
 })
 
+// http://localhost:4000/api/user/edit/1
+app.put("/api/user/edit/:id", (request, response) => {
+  const id = request.params.id;
+
+  const firstName = request.body.first_name;
+  const lastName = request.body.last_name;
+  const rollNumber = request.body.roll_number;
+  const _location = request.body.location;
+  const result = request.body.result;
+
+  const sql_query = `UPDATE Karthick_Kumar SET first_name='${firstName}', last_name='${lastName}', roll_number=${rollNumber}, location='${_location}', result=${result} WHERE Id=${id}`;
+
+  connection.query(sql_query, (error, result) => {
+    if(error){
+      response.status(500).send({
+        error,
+        message: "Sorry something went wrong in server, pls try again!"
+      });
+      return;
+    }
+
+    response.status(200).send({
+      result,
+      message : "Successfully User Profile has been Updated"
+    })
+  })
+
+})
+
+// http://localhost:4000/api/user/delete/1
+app.delete("/api/user/delete/:id", (request, response) => {
+  const id = request.params.id;
+
+  const sql_query = `DELETE FROM Karthick_Kumar WHERE Id=${id}`;
+
+  connection.query(sql_query, (error, result) => {
+    if(error){
+      response.status(500).send({
+        error,
+        message: "Sorry something went wrong in server, pls try again!"
+      });
+      return;
+    }
+
+    response.status(200).send({
+      result,
+      message : "Successfully Deleted a User Profile"
+    });
+  })
+})
 
 const port = process.env.PORT || 4000;
 http.listen(port, () => {
