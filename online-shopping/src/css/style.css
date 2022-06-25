@@ -464,6 +464,7 @@ height: 75px;
 
 .single-product {
   overflow: hidden;
+  width: 195px;
 }
 .single-product:hover {}
 .single-product:hover .product-hover a.add-to-cart-link {top: 32%;}
@@ -472,7 +473,9 @@ height: 75px;
 
 
 .product-carousel {
-  padding-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .latest-product .owl-nav {
   position: absolute;
